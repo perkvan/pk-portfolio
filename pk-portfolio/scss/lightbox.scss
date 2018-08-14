@@ -1,0 +1,27 @@
+label[for] { cursor: pointer; }
+input[type='checkbox'] { display: none; }
+
+.lightbox { width: 100%; position: fixed; top: 0; left: 0; }
+
+
+.lightbox {
+z-index: 1;
+min-height: 100%;
+overflow: auto;
+transform: scale(0);
+transition: opacity .25s ease-out;
+opacity: 0;
+}
+
+.lightbox img {
+position: fixed;
+top: 50%;
+left: 50%;
+max-width: 80vw;
+max-height: 80vh;
+transform: translate(-50%, -50%);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+padding: 0;
+}
+
+input[type='checkbox']:checked + .lightbox { transform: scale(1); opacity: 1; background-color: rgba($black, 0.7)}

@@ -1,0 +1,98 @@
+@import "reset";
+@import "variables";
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  background: $white;
+  color: $black;
+  max-width: 100%;
+  height: 100%;
+/* 	font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1920 - 300))); */
+	font-size: calc(16px + (20 - 16) * ((100vw - 360px) / (1920 - 360)));
+  line-height: 1.55em;
+}
+@media (min-width: 1921px) {
+	html {
+		font-size: calc(20px + (32 - 20) * ((100vw - 1920px) / (3840 - 1920)));
+	}
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+}
+
+// Sticky Header
+// header {
+//   flex: 0 0 auto;
+// }
+//
+// main {
+//   flex: 1 1 auto;
+//   position: relative;/* need this to position inner content */
+//   overflow-y: auto;
+// }
+
+section {
+	width: 100%;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	/* Make sure images are scaled correctly. */
+
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+a  {
+  color: $primary;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.article {
+	img {
+		padding: 2rem 0;
+	}
+	.img-shrink {
+		max-height: 40vh;
+		overflow: hidden;
+		margin: 2rem 0;
+	}
+	.carousel-wrap {
+		padding: 2rem 0;
+	}
+}
+
+
+@media (max-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+	section {
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+	.article {
+		img {
+			max-width: 80vw;
+		}
+	}
+}
+
+@import "layout";
+@import "typography";
+@import "navigation";
+@import "buttons";
+@import "animations";
+@import "lightbox";

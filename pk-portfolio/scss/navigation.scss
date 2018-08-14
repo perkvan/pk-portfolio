@@ -1,0 +1,161 @@
+header {
+  width: 100vw;
+}
+
+.navbar {
+  font-size: 18px;
+  padding-bottom: 10px;
+  height: 90px;
+  z-index: 2;
+  position: relative;
+  margin: 0 auto;
+}
+
+#main-nav {
+  height: 0vh;
+  max-height: 0px;
+  margin-top: -10vh;
+  overflow: hidden;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  background: rgba($dark-black, 0.8);
+
+  transition:max-height 0.5s ease-out;
+}
+
+#body {
+  overflow: visible;
+}
+
+#body.active {
+  overflow: hidden;
+}
+
+#main-nav.active {
+    height: 100vh;
+    top: -1vh;
+    max-height: 100vh;
+    transition:max-height 0.5s ease-out;
+}
+
+#main-nav li {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.nav-links,
+#logo {
+  text-decoration: none;
+  color: $white;
+  fill: $black;
+}
+.nav-links:hover {
+  color: $primary;
+}
+
+#logo {
+  display: flex;
+  padding: 1rem;
+}
+#navbar-toggle {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  color: $black;
+  font-size: 24px;
+  z-index: 4;
+  padding: 1rem 0;
+}
+#navbar-toggle:hover {
+  color: $primary;
+}
+
+//hover effect
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+nav ul li a,
+nav ul li a {
+  position: relative;
+}
+nav ul li a:after,
+nav ul li a:after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: $primary;
+  height: 4px;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .navbar{
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    width: calc((100vw * .618) + 4rem);
+    box-shadow: none;
+  }
+  #main-nav {
+    height: 100%;
+    max-height: 80px;
+    display: flex !important;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+    transition: 0.5s;
+    overflow: visible;
+    margin-top: auto;
+  }
+  #main-nav li {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .nav-links {
+    margin-left: 40px;
+    color: $black;
+  }
+  #logo {
+    margin-top: 0;
+    fill: $black;
+    color: $black;
+    padding: 0;
+    font-size: 1rem;
+  }
+  #logo:hover {
+    #svg-logo{
+      fill: $primary;
+    }
+  }
+  #navbar-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1921px) {
+	.navbar{
+    	width: calc((100vw * 0.618) + 4rem);
+    	max-width: 100%;
+  }
+}

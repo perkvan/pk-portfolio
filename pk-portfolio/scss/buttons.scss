@@ -1,0 +1,104 @@
+/*BUTTONS*/
+
+.btn-prime,
+.btn-sub {
+  font-weight: 700;
+	display: block;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	cursor: pointer;
+	margin: 0.5rem 1rem 0.5rem 0;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: ease 0.4s;
+	-o-transition: ease 0.4s;
+	transition: ease 0.4s;
+	padding: .5rem;
+  max-height: 60px;
+  max-width: 100%;
+}
+.btn-prime {
+	font-size: 1rem;
+}
+.btn-sub {
+	font-size: 1.25em;
+}
+@media screen and (max-width: 768px) {
+	.btn-prime,
+	.btn-sub {
+		width: 100%;
+		margin: 0.5rem 0;
+	}
+}
+/*btn-solid--red special case since default a tags have red text for visited*/
+
+.btn-solid--light {
+	background: $primary;
+  border: solid $primary 2px;
+}
+.btn-border--light:hover {
+	border: solid rgba(0,0,0,0) 2px;
+}
+.btn-border--dark,
+.btn-solid--dark:hover {
+	color: $white !important;
+}
+.btn-border--dark:hover,
+.btn-border--light,
+.btn-solid--light,
+.btn-solid--dark {
+	color: $white !important;
+}
+
+.navbar-toggle.btn-solid--light button:focus {
+  color: $white;
+  border-color: $primary;
+}
+
+.btn-border--light:hover,
+.btn-border--red:hover,
+.btn-border--red,
+.btn-solid--light:hover {
+	color: $black !important;
+}
+.btn-border--red,
+.btn-border--light{
+	border: solid $primary 2px;
+}
+.btn-border--red:hover,
+.btn-solid--light:hover{
+  border: solid $black 2px;
+  background: transparent;
+  color: $black;
+}
+.btn-border--dark,
+.btn-border--dark:hover,
+.btn-solid--dark:hover {
+	border: solid $white 2px;
+}
+
+.btn-solid--dark
+{
+	border: solid $black 2px;
+}
+.btn-solid--dark,
+.btn-border--dark:hover {
+	background: $white;
+}
+.btn-border--red:hover,
+.btn-solid--dark:hover {
+	background: $primary;
+}
+.btn-border--red,
+.btn-border--dark,
+.btn-border--light {
+	background: transparent;
+}
+a.btn-border--dark:visited,
+a.btn-solid--light:visited,
+a.btn-border--light:visited,
+a.btn-border--red:visited,
+a.btn-solid--dark:visited {
+	text-decoration: underline;
+}
