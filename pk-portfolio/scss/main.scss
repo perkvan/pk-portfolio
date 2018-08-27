@@ -64,13 +64,18 @@ a  {
 	img {
 		padding: 2rem 0;
 	}
-	.img-shrink {
-		max-height: 40vh;
-		overflow: hidden;
-		margin: 2rem 0;
-	}
 	.carousel-wrap {
 		padding: 2rem 0;
+	}
+}
+
+.footer {
+	background-color: $black;
+	a {
+		color: $white;
+		&:hover {
+			color: $primary;
+		}
 	}
 }
 

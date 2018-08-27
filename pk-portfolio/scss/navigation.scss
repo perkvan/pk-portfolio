@@ -22,7 +22,6 @@ header {
   padding: 0;
   position: relative;
   z-index: 2;
-  background: rgba($dark-black, 0.8);
 
   transition:max-height 0.5s ease-out;
 }
@@ -62,7 +61,12 @@ header {
 #logo {
   display: flex;
   padding: 1rem;
+  &:hover{
+    fill: $primary !important;
+  }
 }
+
+
 #navbar-toggle {
   position: absolute;
   right: 20px;
@@ -138,15 +142,19 @@ nav ul li a:hover:after {
   }
   #logo {
     margin-top: 0;
-    fill: $black;
-    color: $black;
     padding: 0;
     font-size: 1rem;
+    color: $black;
+  }
+  .footer #logo {
+    fill: $white;
   }
   #logo:hover {
     #svg-logo{
       fill: $primary;
     }
+    color: $primary;
+    fill: $primary;
   }
   #navbar-toggle {
     display: none;

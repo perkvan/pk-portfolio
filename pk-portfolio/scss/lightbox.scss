@@ -13,10 +13,17 @@ transition: opacity .25s ease-out;
 opacity: 0;
 }
 
+.img-shrink {
+  max-height: 40vh;
+  width: auto;
+}
+
 .lightbox img {
 position: fixed;
 top: 50%;
 left: 50%;
+width: auto;
+height: auto;
 max-width: 80vw;
 max-height: 80vh;
 transform: translate(-50%, -50%);

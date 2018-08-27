@@ -99,13 +99,18 @@ a:hover {
 .article img {
   padding: 2rem 0;
 }
-.article .img-shrink {
-  max-height: 40vh;
-  overflow: hidden;
-  margin: 2rem 0;
-}
 .article .carousel-wrap {
   padding: 2rem 0;
+}
+
+.footer {
+  background-color: #231f20;
+}
+.footer a {
+  color: #f1f1f1;
+}
+.footer a:hover {
+  color: #ff3d54;
 }
 
 @media (max-width: 768px) {
@@ -616,6 +621,10 @@ a:hover {
   position: relative;
 }
 
+.project div.card {
+  box-shadow: 6px 6px 12px #ff3d54;
+}
+
 .big-break {
   padding: 2rem 0;
 }
@@ -704,8 +713,9 @@ hr {
 }
 
 p {
-  font-size: 0.818rem;
-  line-height: 1.55rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8875rem;
 }
 
 .education h5 {
@@ -736,6 +746,7 @@ p {
 }
 
 .article p.article-callout {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   line-height: 2.1rem;
 }
@@ -859,7 +870,6 @@ header {
   padding: 0;
   position: relative;
   z-index: 2;
-  background: rgba(17, 17, 17, 0.8);
   transition: max-height 0.5s ease-out;
 }
 
@@ -900,6 +910,9 @@ header {
 #logo {
   display: flex;
   padding: 1rem;
+}
+#logo:hover {
+  fill: #ff3d54 !important;
 }
 
 #navbar-toggle {
@@ -982,12 +995,19 @@ nav ul li a:hover:after {
 
   #logo {
     margin-top: 0;
-    fill: #231f20;
-    color: #231f20;
     padding: 0;
     font-size: 1rem;
+    color: #231f20;
   }
 
+  .footer #logo {
+    fill: #f1f1f1;
+  }
+
+  #logo:hover {
+    color: #ff3d54;
+    fill: #ff3d54;
+  }
   #logo:hover #svg-logo {
     fill: #ff3d54;
   }
@@ -1136,9 +1156,6 @@ a.btn-solid--dark:visited {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.hovereffect:hover .overlay {
-  background-color: rgba(255, 61, 84, 0.7);
-}
 .hovereffect img {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -1150,11 +1167,17 @@ a.btn-solid--dark:visited {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
 .hovereffect:hover img {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
 label[for] {
@@ -1181,10 +1204,17 @@ input[type=checkbox] {
   opacity: 0;
 }
 
+.img-shrink {
+  max-height: 40vh;
+  width: auto;
+}
+
 .lightbox img {
   position: fixed;
   top: 50%;
   left: 50%;
+  width: auto;
+  height: auto;
   max-width: 80vw;
   max-height: 80vh;
   transform: translate(-50%, -50%);
