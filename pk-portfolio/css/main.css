@@ -267,7 +267,7 @@ a:hover {
 .three {
   max-width: calc( (100% - 2em) / 3);
   -ms-flex-preferred-size: calc( (100% - 4em) / 3);
-  flex-basis: calc( (100% - 4em) / 3);
+  flex-basis: calc( (100% - 6em) / 3);
 }
 
 .four {
@@ -629,7 +629,7 @@ a:hover {
   margin-right: 1rem;
   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
 }
-.card h4 {
+.card h5, .card h4 {
   margin: 0;
 }
 
@@ -736,7 +736,7 @@ hr {
 
 p {
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.8875rem;
 }
 
@@ -1164,7 +1164,7 @@ a.btn-solid--dark:visited {
   overflow: hidden;
   position: relative;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .hovereffect .overlay {
   width: 100%;
