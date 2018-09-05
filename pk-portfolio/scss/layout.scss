@@ -128,12 +128,12 @@
 	    flex-basis: calc( (100% - 3em) / 2);
 }
 .three {
-	max-width: calc( (100% - 6em) / 3);
-	-ms-flex-preferred-size: calc( (100% - 6em) / 3);
-	    flex-basis: calc( (100% - 6em) / 3);
+	max-width: calc( (100% - 2em) / 3);
+	-ms-flex-preferred-size: calc( (100% - 4em) / 3);
+	    flex-basis: calc( (100% - 4em) / 3);
 }
 .four {
-	max-width: calc( (100% - 9em) / 4);
+	max-width: calc( (100% - 2em) / 4);
 	-ms-flex-preferred-size: calc( (100% - 9em) / 4);
 	    flex-basis: calc( (100% - 9em) / 4);
 }
@@ -450,9 +450,31 @@
   position: relative;
 }
 
-.project div.card {
-	box-shadow: 6px 6px 12px $primary;
+.card{
+	display: flex;
+  padding: 1rem;
+	background-color: #fff;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+	box-shadow: 6px 6px 15px rgba(0,0,0,0.2);
+	h4 {
+		margin: 0;
+	}
 
+}
+@media all and (min-width: 40em) {
+  .card {
+    width: 50%;
+  }
+}
+@media all and (min-width: 60em) {
+  .card {
+    width: 33.33%;
+  }
+}
+
+.card p {
+	flex: 1 0 auto;
 }
 
 .big-break {

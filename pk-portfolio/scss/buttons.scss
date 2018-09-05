@@ -33,7 +33,7 @@
 }
 /*btn-solid--red special case since default a tags have red text for visited*/
 
-.btn-solid--light {
+.btn-solid--light, .btn-solid--dark {
 	background: $primary;
   border: solid $primary 2px;
 }
@@ -82,12 +82,10 @@
 {
 	border: solid $black 2px;
 }
-.btn-solid--dark,
-.btn-border--dark:hover {
-	background: $white;
-}
-.btn-border--red:hover,
 .btn-solid--dark:hover {
+	background: transparent;
+}
+.btn-border--red:hover {
 	background: $primary;
 }
 .btn-border--red,

@@ -265,13 +265,13 @@ a:hover {
 }
 
 .three {
-  max-width: calc( (100% - 6em) / 3);
-  -ms-flex-preferred-size: calc( (100% - 6em) / 3);
-  flex-basis: calc( (100% - 6em) / 3);
+  max-width: calc( (100% - 2em) / 3);
+  -ms-flex-preferred-size: calc( (100% - 4em) / 3);
+  flex-basis: calc( (100% - 4em) / 3);
 }
 
 .four {
-  max-width: calc( (100% - 9em) / 4);
+  max-width: calc( (100% - 2em) / 4);
   -ms-flex-preferred-size: calc( (100% - 9em) / 4);
   flex-basis: calc( (100% - 9em) / 4);
 }
@@ -621,8 +621,30 @@ a:hover {
   position: relative;
 }
 
-.project div.card {
-  box-shadow: 6px 6px 12px #ff3d54;
+.card {
+  display: flex;
+  padding: 1rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+.card h4 {
+  margin: 0;
+}
+
+@media all and (min-width: 40em) {
+  .card {
+    width: 50%;
+  }
+}
+@media all and (min-width: 60em) {
+  .card {
+    width: 33.33%;
+  }
+}
+.card p {
+  flex: 1 0 auto;
 }
 
 .big-break {
@@ -1058,7 +1080,7 @@ nav ul li a:hover:after {
   }
 }
 /*btn-solid--red special case since default a tags have red text for visited*/
-.btn-solid--light {
+.btn-solid--light, .btn-solid--dark {
   background: #ff3d54;
   border: solid #ff3d54 2px;
 }
@@ -1113,13 +1135,11 @@ nav ul li a:hover:after {
   border: solid #231f20 2px;
 }
 
-.btn-solid--dark,
-.btn-border--dark:hover {
-  background: #f1f1f1;
+.btn-solid--dark:hover {
+  background: transparent;
 }
 
-.btn-border--red:hover,
-.btn-solid--dark:hover {
+.btn-border--red:hover {
   background: #ff3d54;
 }
 
