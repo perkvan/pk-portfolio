@@ -22,8 +22,13 @@ header {
   padding: 0;
   position: relative;
   z-index: 2;
+  background: rgba($dark-black, 0.8);
 
   transition:max-height 0.5s ease-out;
+}
+
+.footer #main-nav {
+  background: transparent;
 }
 
 #body {

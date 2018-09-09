@@ -147,12 +147,14 @@
 	-ms-flex-preferred-size: calc( (100% - 15rem) / 6);
 	    flex-basis: calc( (100% - 15rem) / 6);
 }
-.two:nth-child(2n),
-.three:nth-child(3n),
-.four:nth-child(4n),
-.five:nth-child(5n),
-.six:nth-child(6n) {
-	margin-right: 0;
+@media screen and (min-width: 999px) {
+	.two:nth-child(2n),
+	.three:nth-child(3n),
+	.four:nth-child(4n),
+	.five:nth-child(5n),
+	.six:nth-child(6n) {
+		margin-right: 0;
+	}
 }
 @media screen and (max-width: 999px) {
 	.flex {
@@ -465,6 +467,7 @@
 @media all and (min-width: 40em) {
   .card {
     width: 50%;
+		margin-right: 1rem;
   }
 }
 @media all and (min-width: 60em) {
