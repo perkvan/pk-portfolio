@@ -62,7 +62,7 @@ a  {
 
 .article {
 	img {
-		padding: 2rem 0;
+		padding: 2rem 0 0 0;
 	}
 	.carousel-wrap {
 		padding: 2rem 0;
@@ -81,9 +81,6 @@ a  {
 
 
 @media (max-width: 768px) {
-  main {
-    padding: 2rem;
-  }
 	section {
 		padding-top: 2em;
 		padding-bottom: 2em;
@@ -95,9 +92,9 @@ a  {
 	}
 }
 
-@import "layout";
 @import "typography";
 @import "navigation";
 @import "buttons";
 @import "animations";
 @import "lightbox";
+@import "layout";

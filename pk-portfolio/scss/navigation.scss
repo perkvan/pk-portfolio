@@ -29,6 +29,10 @@ header {
 
 .footer #main-nav {
   background: transparent;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 #body {
@@ -53,17 +57,18 @@ header {
   font-size: 2rem;
   font-weight: 700;
 }
-.nav-links,
-#logo {
+.nav-links,#logo{
   text-decoration: none;
-  color: $white;
   fill: $black;
+  color: $white;
 }
 .nav-links:hover {
   color: $primary;
 }
 
 #logo {
+  color: $black;
+  fill: $black;
   display: flex;
   padding: 1rem;
   &:hover{
