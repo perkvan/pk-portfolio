@@ -548,17 +548,12 @@ nav ul li a:hover:after {
   border: solid #ff3d54 2px;
 }
 
-.btn-border--light:hover {
-  border: solid rgba(0, 0, 0, 0) 2px;
-}
-
 .btn-border--dark,
 .btn-solid--dark:hover {
   color: #fff !important;
 }
 
 .btn-border--dark:hover,
-.btn-border--light,
 .btn-solid--light,
 .btn-solid--dark {
   color: #fff !important;
@@ -569,23 +564,31 @@ nav ul li a:hover:after {
   border-color: #ff3d54;
 }
 
-.btn-border--light:hover,
+.btn-border--light,
 .btn-border--red:hover,
 .btn-border--red,
 .btn-solid--light:hover {
   color: #231f20 !important;
 }
 
-.btn-border--red,
-.btn-border--light {
+.btn-border--red {
   border: solid #ff3d54 2px;
 }
 
-.btn-border--red:hover,
-.btn-solid--light:hover {
+.btn-border--light {
+  border: solid #231f20 2px;
+}
+
+.btn-border--red:hover {
   border: solid #231f20 2px;
   background: transparent;
   color: #231f20;
+}
+
+.btn-border--light:hover {
+  border: solid #231f20 2px;
+  background: #231f20;
+  color: #fff !important;
 }
 
 .btn-border--dark,

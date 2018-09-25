@@ -37,15 +37,11 @@
 	background: $primary;
   border: solid $primary 2px;
 }
-.btn-border--light:hover {
-	border: solid rgba(0,0,0,0) 2px;
-}
 .btn-border--dark,
 .btn-solid--dark:hover {
 	color: $white !important;
 }
 .btn-border--dark:hover,
-.btn-border--light,
 .btn-solid--light,
 .btn-solid--dark {
 	color: $white !important;
@@ -56,21 +52,27 @@
   border-color: $primary;
 }
 
-.btn-border--light:hover,
+.btn-border--light,
 .btn-border--red:hover,
 .btn-border--red,
 .btn-solid--light:hover {
 	color: $black !important;
 }
-.btn-border--red,
-.btn-border--light{
+.btn-border--red{
 	border: solid $primary 2px;
 }
-.btn-border--red:hover,
-.btn-solid--light:hover{
+.btn-border--light{
+  border: solid $black 2px;
+}
+.btn-border--red:hover{
   border: solid $black 2px;
   background: transparent;
   color: $black;
+}
+.btn-border--light:hover{
+  border: solid $black 2px;
+  background: $black;
+  color: $white !important;
 }
 .btn-border--dark,
 .btn-border--dark:hover,
