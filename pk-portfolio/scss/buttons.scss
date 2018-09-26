@@ -44,7 +44,13 @@
 .btn-border--dark:hover,
 .btn-solid--light,
 .btn-solid--dark {
-	color: $white !important;
+	color: $white;
+}
+
+.btn-solid--light:hover {
+  background: transparent;
+  border: solid $primary 2px;
+  color: $primary;
 }
 
 .navbar-toggle.btn-solid--light button:focus {
@@ -54,8 +60,7 @@
 
 .btn-border--light,
 .btn-border--red:hover,
-.btn-border--red,
-.btn-solid--light:hover {
+.btn-border--red {
 	color: $black !important;
 }
 .btn-border--red{

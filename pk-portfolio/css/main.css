@@ -556,7 +556,13 @@ nav ul li a:hover:after {
 .btn-border--dark:hover,
 .btn-solid--light,
 .btn-solid--dark {
-  color: #fff !important;
+  color: #fff;
+}
+
+.btn-solid--light:hover {
+  background: transparent;
+  border: solid #ff3d54 2px;
+  color: #ff3d54;
 }
 
 .navbar-toggle.btn-solid--light button:focus {
@@ -566,8 +572,7 @@ nav ul li a:hover:after {
 
 .btn-border--light,
 .btn-border--red:hover,
-.btn-border--red,
-.btn-solid--light:hover {
+.btn-border--red {
   color: #231f20 !important;
 }
 
