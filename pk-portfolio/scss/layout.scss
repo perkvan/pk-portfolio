@@ -181,6 +181,14 @@
 	    flex-basis: calc( (100% - 15rem) / 6);
 }
 
+.two:nth-child(2n),
+.three:nth-child(3n),
+.four:nth-child(4n),
+.five:nth-child(5n),
+.six:nth-child(6n) {
+	margin-right: 0;
+}
+
 @media screen and (max-width: 500px) {
 	.two-mobile {
 		width: 100%;
@@ -471,13 +479,6 @@
 }
 
 @media screen and (max-width: 999px) {
-	.two:nth-child(2n),
-	.three:nth-child(3n),
-	.four:nth-child(4n),
-	.five:nth-child(5n),
-	.six:nth-child(6n) {
-		margin-right: 0;
-	}
 	.flex {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
