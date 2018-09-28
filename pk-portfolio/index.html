@@ -43,9 +43,17 @@
    <main>
     <section>
       <div style="max-height: 60vh;" class="flex container">
-         <div class="flex column jc-c as-c">
-          <div style="margin-right:0; margin-top: -4rem;" class="flex">
-           <h1 class="super"><span style="color: #ff3d54;">aesthetic</span> experience</h1>
+         <div class="flex column _2x jc-c as-c">
+          <div style="margin-right:0; margin-top: -4rem;" class="column">
+            <h1 style="color: #ff3d54;">
+              Full Stack Designer
+              <br />
+           </h1>
+           <h4>
+          <a href="" class="typewrite" data-period="1000" data-type='[ "User Experience", "User Interface", "Front-End Development", "Mobile Applications", "Cinematography" ]'>
+            <span class="wrap"></span>
+          </a></h4>
+           <p>From research to design and design to development. I'll not only provide meaningful insights, but practical applications tied up in beautifully crafted designs. Fusing the gap between the functional and the fantastic.</p>
           </div>
          </div>
          <div class="flex column _2x jc-c ai-c hide-mobile" >
@@ -184,5 +192,63 @@
   </main>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
      <script src="js/nav.js"></script>
+     <script>
+     var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 12.5) || 5000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 100 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #ff3d54}";
+        document.body.appendChild(css);
+    };
+     </script>
  </body>
 </html>

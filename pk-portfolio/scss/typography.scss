@@ -1,7 +1,7 @@
 h1 {
   font-weight: 700;
-  font-size: 4.25rem;
-  line-height: 5.0625rem;
+  font-size: 3.25rem;
+  line-height: 4rem;
   margin-top: 1.6875rem;
   margin-bottom: 1.6875rem;
 }
@@ -82,6 +82,14 @@ p{
     &:first-of-type {
         margin-top: 1rem;
     }
+  }
+}
+
+.typewrite {
+  text-decoration: none;
+  color: $black;
+  &:hover {
+    color: $black;
   }
 }
 

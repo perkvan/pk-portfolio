@@ -125,8 +125,8 @@ a:hover {
 }
 h1 {
   font-weight: 700;
-  font-size: 4.25rem;
-  line-height: 5.0625rem;
+  font-size: 3.25rem;
+  line-height: 4rem;
   margin-top: 1.6875rem;
   margin-bottom: 1.6875rem;
 }
@@ -208,6 +208,14 @@ p {
 }
 .list h4:first-of-type {
   margin-top: 1rem;
+}
+
+.typewrite {
+  text-decoration: none;
+  color: #231f20;
+}
+.typewrite:hover {
+  color: #231f20;
 }
 
 .work-xp h6 {
